@@ -1,0 +1,9 @@
+.zsh/.zsh_history
+.zsh/.zcompdump
+.vim/backup/*
+.vim/sessions/*
+.vim/undo/*
+.vim/unusedplugins/
+.vim/.netrwhist
+.vim/colors/mmso_v1.vim
+.vim/colors/mmso_v3.vim

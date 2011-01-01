@@ -1,0 +1,49 @@
+# cd alias
+alias '..'='cd ..'
+alias '...'='cd ../..'
+alias '....'='cd ../../..'
+
+# suffix alias
+alias -s png=feh
+alias -s jpg=feh
+alias -s jpeg=feh
+alias -s html=$BROWSER
+
+# misc
+alias cp='cp -v'
+alias mv='mv -vi'
+alias rm='rm -vI'
+
+alias ls='ls -hvA --color=always --group-directories-first --time=ctime'
+alias l='l --sort=time -r'
+alias lsd='ls -d *(/)'
+alias lsf='ls *(.)'
+alias grep='grep --color=auto '
+alias jag='du -h --time --time-style=iso --max-depth=1 | sort -hr'
+
+alias pacman='sudo pacman'
+alias yaourt='sudo yaourt'
+alias si='yaourt -S'
+alias ss='yaourt -Ss'
+alias sy='yaourt -Syu --devel --aur'
+alias sc='pacman -Rs $(pacman -Qqtd)'
+alias sr='pacman -R'
+
+alias halt='sudo halt'
+alias reboot='sudo reboot'
+
+alias svim='sudo vim'
+alias zrc='vim zsh'
+alias vrc='vim ~/.vimrc'
+alias rz='source ~/.zshrc'
+
+alias a='apack'
+alias x='aunpack'
+alias untz='for z in *.zip; do yes | unzip $z; done'
+alias pl='playrar.sh'
+
+alias strlen="perl -e 'for(@ARGV) { print length(\$_), \"\\n\";}'"
+
+alias msv='ssh msvan@u-shell.csc.kth.se -Y'
+alias lol='ssh -p 2222 lolzboll.doesntexist.org'
+alias mms='ssh -p 14022 svanstrom.nu'

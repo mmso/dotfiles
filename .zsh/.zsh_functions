@@ -1,0 +1,38 @@
+# ls after cd
+cd () {
+	builtin cd $@
+	ls 
+}
+
+# archlinux specific
+s() {
+	sudo /etc/rc.d/$@
+}
+
+# converts pseudo terminal colors to terminal colors
+termcol() {
+	if ((!$#)); then
+		echo "error: require filepath";
+		return;
+	fi;
+
+	for line in $(\
+		sed -n "\
+		s/\*color/P/;\
+		T;\
+		s/P1\([0-9]\)/H\1/;\
+		Tf;\
+		s/H0/PA/;\
+		s/H1/PB/;\
+		s/H2/PC/;\
+		s/H3/PD/;\
+		s/H4/PE/;\
+		s/H5/PF/;\
+		:f;\
+		s/\(.*\):.*#\(.*\)/\\\e]\1\2/p" $1);
+	do
+		echo -en $line;
+	done
+
+	clear;
+}

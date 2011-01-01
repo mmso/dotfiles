@@ -1,0 +1,29 @@
+*background:           #030303
+*foreground:           #FFFFFF
+
+*color0:      #030303
+**color8:     #1C1C1C 
+/* red */
+*color1:      #FF4747
+*color9:      #FF6767
+/* green */
+*color2:      #2b4626/* green => grey */
+*color10:     #B03B31 /* green => faluröd */
+/* yellow */
+*color3:      #FF8F00
+*color11:     #BDF13D
+/* blue */
+*color4:      #1165E9
+*color12:     #5496FF
+/* purple */
+*color5:      #aef7a4 # light green 
+*color13:     #B50077
+/* cyan */
+*color6:      #CB1C13 /* cyan => red */ /* 47E0FF */
+*color14:     #6BE603 /* cyan => green */
+/* white */
+*color7:      #FFFFFF
+*color15:     #DEDEDE
+/* orange */
+*color16:     #FFB000
+

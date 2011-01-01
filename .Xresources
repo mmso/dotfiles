@@ -1,0 +1,42 @@
+#include "colors/mmso2"
+
+Xcursor.theme: Human
+Xcursor.size: 12
+
+urxvt*buffered: true
+
+urxvt*termName: rxvt-256color
+urxvt*saveLines: 1024
+urxvt*boldMode: true
+
+urxvt*urgentOnBell: true
+urxvt*visualBell: false
+
+urxvt*cursorBlink: false
+urxvt*cursorColor: #ff8700
+
+urxvt*scrollTtyKeypress: true
+urxvt*scrollWithBuffer: false
+urxvt*scrollTtyOutput: false
+urxvt*scrollBar: false
+urxvt*scrollstyle: plain
+urxvt*secondaryScroll: true
+urxvt*jumpScroll: true
+
+!urxvt*perl-lib: /usr/lib/urxvt/perl/
+!urxvt*perl-ext-common: default,matcher,searchable-scrollback
+!urxvt*urlLauncher: /usr/bin/google-chrome
+!urxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+!urxvt*font: -*-montecarlo-medium-*-*-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-montecarlo-bold-*-*-*-11-*-*-*-*-*-*-*
+
+urxvt*font: xft:Liberation Mono:size=8:style=regular
+urxvt*boldFont: xft:Liberation Mono:size=8:style=bold
+
+Xft*dpi: 72
+Xft*antialias: true
+Xft*rgba: rgb
+Xft*hinting: true
+Xft*hintstyle: hintslight
+Xft*lcdfilter: lcddefault
