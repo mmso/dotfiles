@@ -2,22 +2,18 @@ scriptencoding utf-8
 
 " general {{{
 " --------------------------------------------------------------------------
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 "set verbose=9
+set nocompatible
 
-set fileencodings=utf-8,latin1
 set encoding=utf-8
 set termencoding=utf-8
 
+set fileencodings=utf-8,latin1
 set fileformats=unix,dos,mac
 
 set history=300
-set nocompatible
-set ttyfast
-set lazyredraw
 
 set backup
 set backupdir=$HOME/.vim/backup
@@ -36,10 +32,15 @@ set virtualedit=block,onemore
 " ui {{{
 " --------------------------------------------------------------------------
 set showcmd
+set showmode
 set cursorline
 set number
 
+set previewheight=5
+
 set wildmenu
+set wildchar=<tab>
+set wildmode=longest:full,full
 set wildignore+=*.o,*~,.lo
 
 set list
@@ -68,16 +69,14 @@ set visualbell t_vb=
 " }}}
 " colortheme {{{
 " --------------------------------------------------------------------------
-syntax enable
-set background=dark
+syntax on
 
 if &term=="linux"
 	set t_Co=16
 	colorscheme vimbrant
 else
 	set t_Co=256
-	colorscheme mmso_v2
-	"colorscheme mmso_v4
+	colorscheme mmso_v7
 endif
 
 
@@ -85,16 +84,14 @@ endif
 " tabbing {{{
 " --------------------------------------------------------------------------
 set linebreak
-set textwidth=80
+set textwidth=0
 
-let tabsize =4
-execute "set tabstop=".tabsize
-execute "set shiftwidth=".tabsize
-execute "set softtabstop=".tabsize
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 set smarttab
 set autoindent
-set cindent
 
 
 " }}}
@@ -102,19 +99,10 @@ set cindent
 " --------------------------------------------------------------------------
 set laststatus=2
 
-set statusline=
-set statusline+=%2*%-3.3n%0*
-set statusline+=%f\ 
-set statusline+=%h%1*%m%r%w%0*
-
-set statusline+=[%{strlen(&filetype)?&filetype:'nil'},%{&encoding},%{&fileformat}]
-
-set statusline+=%{SyntasticStatuslineFlag()}
-
-set statusline+=%=%<
-
-set statusline+=%2*0x%-8B
-set statusline+=%-8.(%l,%c%)\ %P
+let s1="%3.3n\\ %f\\ %h%m%r%w"
+let s2="[%{strlen(&filetype)?&filetype:'?'},\\ %{&encoding},\\ %{&fileformat}]"
+let s3="%=\\ 0x%-8B\\ \\ %-14.(%l,%c%V%)\\ %<%P"
+execute "set statusline=" . s1 . s2 . s3
 
 
 " }}}
@@ -134,6 +122,10 @@ let mapleader = ","
 imap jj <ESC>
 imap ,, <ESC>
 
+" no manual
+nmap <S-k> <nop>
+nmap <S-j> <nop>
+
 " common
 nmap <leader>w :w!<CR>
 nmap <leader>q :qall<CR>
@@ -141,6 +133,7 @@ nmap <leader>Q :qall!<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
 nmap <leader>s :Sscratch<cr>
+nmap <leader>p :YRShow<cr>
 
 " not so common
 map <F3> :set paste! paste?<CR>
@@ -179,12 +172,20 @@ function! s:init()
 	endif
 endfun
 
+
 " allows to open vim with a project name as argument to open that session
 autocmd vimenter * :call s:init()
 
+
+" }}}
+" lang {{{
+" --------------------------------------------------------------------------
+au FileType python setlocal tabexpand shiftwidth=4 tabstop=4
+au FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 " extra {{{
 " --------------------------------------------------------------------------
 let NERDTreeWinSize=20
 let g:syntastic_auto_loc_list=1
+let g:yankring_history_dir = '$HOME/.vim/'

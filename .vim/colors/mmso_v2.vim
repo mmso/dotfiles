@@ -29,7 +29,7 @@ hi directory	ctermfg=253		ctermbg=57		cterm=none
 hi question		ctermfg=81						cterm=none
 hi errormsg		ctermfg=160		ctermbg=245		cterm=none
 
-hi linenr		ctermfg=8		ctermbg=0		cterm=none
+hi linenr		ctermfg=8		ctermbg=232		cterm=none
 hi vertsplit	ctermfg=235		ctermbg=235		cterm=none
 hi matchparen					ctermbg=none	cterm=bold
 
@@ -116,7 +116,7 @@ hi float		ctermfg=134
 hi identifier	ctermfg=208						cterm=bold
 hi function		ctermfg=118
 
-hi comment		ctermfg=59
+hi comment		ctermfg=59						cterm=italic
 
 hi macro		ctermfg=193
 hi precondit	ctermfg=118						cterm=bold

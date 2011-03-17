@@ -1,7 +1,7 @@
 # ls after cd
 cd () {
 	builtin cd $@
-	ls 
+	ls
 }
 
 # archlinux specific
@@ -36,3 +36,4 @@ termcol() {
 
 	clear;
 }
+

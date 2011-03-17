@@ -1,42 +1,27 @@
-#include "colors/mmso2"
+#include "colors/mmso3"
 
-Xcursor.theme: Human
-Xcursor.size: 12
+! rxvt settings
+urxvt.termName: rxvt-unicode-256color
+urxvt.saveLines: 16384
+urxvt.scrollTtyKeypress: true
+urxvt.scrollWithBuffer: false
+urxvt.scrollTtyOutput: false
+urxvt.scrollBar: false
+urxvt.urgentOnBell: true
+urxvt.perl-ext-common:  default,matcher
+urxvt.matcher.button: 1
+urxvt.urlLauncher: firefox
 
-urxvt*buffered: true
+! terminal font
+urxvt.font: 7x13
+urxvt.boldFont: 7x13bold
+urxvt.italicFont: 7x13
+urxvt.boldItalicFont: 7x13bold
 
-urxvt*termName: rxvt-256color
-urxvt*saveLines: 1024
-urxvt*boldMode: true
-
-urxvt*urgentOnBell: true
-urxvt*visualBell: false
-
-urxvt*cursorBlink: false
-urxvt*cursorColor: #ff8700
-
-urxvt*scrollTtyKeypress: true
-urxvt*scrollWithBuffer: false
-urxvt*scrollTtyOutput: false
-urxvt*scrollBar: false
-urxvt*scrollstyle: plain
-urxvt*secondaryScroll: true
-urxvt*jumpScroll: true
-
-!urxvt*perl-lib: /usr/lib/urxvt/perl/
-!urxvt*perl-ext-common: default,matcher,searchable-scrollback
-!urxvt*urlLauncher: /usr/bin/google-chrome
-!urxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-
-!urxvt*font: -*-montecarlo-medium-*-*-*-11-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-montecarlo-bold-*-*-*-11-*-*-*-*-*-*-*
-
-urxvt*font: xft:Liberation Mono:size=8:style=regular
-urxvt*boldFont: xft:Liberation Mono:size=8:style=bold
-
-Xft*dpi: 72
-Xft*antialias: true
-Xft*rgba: rgb
-Xft*hinting: true
-Xft*hintstyle: hintslight
-Xft*lcdfilter: lcddefault
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.rgba: rgb

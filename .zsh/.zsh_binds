@@ -6,7 +6,6 @@ bindkey "^d" kill-whole-line
 bindkey "^p" yank
 bindkey "^r" history-incremental-search-backward
 bindkey "^z" undo
-# <ctrl-v> + key
 bindkey "\e[7~" beginning-of-line
 bindkey "\e[8~" end-of-line
 bindkey "\e[3~" delete-char

@@ -1,3 +1,5 @@
+keycode 48 = adiaeresis Adiaeresis adiaeresis Adiaeresis bar brokenbar bar brokenbar
 keycode 49 = asciitilde onehalf asciitilde onehalf paragraph threequarters
+keycode 59 = comma semicolon comma semicolon less ogonek cedilla ogonek
+keycode 60 = period colon period colon greater abovedot periodcentered abovedot
 keycode 61 = minus underscore slash underscore slash slash
-
