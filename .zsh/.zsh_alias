@@ -13,8 +13,8 @@ alias -s html=$BROWSER
 alias cp='cp -v'
 alias mv='mv -vi'
 alias rm='rm -vI'
-alias cpv='rsync -Ih --progress -e /dev/null -- ${@}a'
-
+alias cpr='rsync -aP --no-whole-file --inplace'
+alias mvr='cpr --remove-source-files'
 
 alias ls='ls -hA --color=always --group-directories-first --time=ctime'
 alias lt='l --sort=time -r'
@@ -43,7 +43,6 @@ alias rz='source ~/.zshrc'
 alias a='apack'
 alias x='aunpack'
 alias untz='for z in *.zip; do yes | unzip $z; done'
-alias pl='playrar.sh'
 
 alias strlen="perl -e 'for(@ARGV) { print length(\$_), \"\\n\";}'"
 
@@ -51,6 +50,6 @@ alias msv='ssh msvan@u-shell.csc.kth.se -Y'
 alias lol='ssh -p 2222 lolzboll.doesntexist.org'
 alias mms='ssh -p 14022 svanstrom.nu'
 
-alias quake='cd /home/mattias/src/c/ioquake3/build/release-linux-x86_64 && ./ioquake3.x86_64 +set fs_game excessiveplus +set vm_cgame 2 +set vm_ui 2 +connect 85.21.245.144:27965'
+alias quake='cd /home/mattias/src/repo/ioquake3/build/release-linux-x86_64 && ./ioquake3.x86_64 +set fs_game excessiveplus +set vm_cgame 2 +set vm_ui 2 +connect 85.21.245.144:27965'
 
 

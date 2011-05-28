@@ -45,7 +45,7 @@ set wildignore+=*.o,*~,.lo
 
 set list
 set listchars=eol:¬,tab:→\ ,trail:~,extends:►,precedes:◄
-"set nolist
+set nolist
 
 
 " }}}
@@ -76,9 +76,10 @@ if &term=="linux"
 	colorscheme vimbrant
 else
 	set t_Co=256
-	colorscheme mmso_v7
+	colorscheme mmso_white_v2
+	"colorscheme github
+	"colorscheme eclipse
 endif
-
 
 " }}}
 " tabbing {{{
@@ -188,4 +189,15 @@ au FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " --------------------------------------------------------------------------
 let NERDTreeWinSize=20
 let g:syntastic_auto_loc_list=1
-let g:yankring_history_dir = '$HOME/.vim/'
+let g:yankring_paste_check_default_buffer=1
+let g:yankring_history_dir='$HOME/.vim/'
+
+map <buffer> <silent> p :YRShow<cr>:YRShow<cr>:YRGetElem 1<cr>
+
+
+if has('gui_running')
+    set guioptions-=T   " Get rid of toolbar "
+    set guioptions-=m   " Get rid of menu    "
+set guioptions+=b
+endif
+

@@ -1,0 +1,43 @@
+*background:	#ffffff
+*foreground:	#000000
+
+!black
+*color0:		#000000
+*color8:		#212121
+
+!red
+!*color1:		#e30707
+!*color9:		#f83030
+!*color1:		#7b1a10
+*color1:		#6d241c
+*color9:		#55241f
+
+!green
+!*color2:		#5e8c6a
+*color10:		#2d5838
+*color2:		#30594a
+!*color10:		#18331c
+
+!yellow
+!*color3:		#ac6500
+!*color11:		#e7900f
+!*color3:		#121212
+!*color11:		#212121
+*color3:		#5f3317
+*color11:		#473529
+
+!blue
+*color4:		#283738
+*color12:		#354e50
+
+!magenta
+*color5:		#2c2427
+*color13:		#542437
+
+!cyan
+*color6:		#79424b
+*color14:		#473033
+
+!white
+*color7:		#ffffff
+*color15:		#000000

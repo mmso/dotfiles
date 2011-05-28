@@ -1,4 +1,4 @@
-#include "colors/mmso3"
+#include "colors/mmso_white_saturated"
 
 ! rxvt settings
 urxvt.termName: rxvt-unicode-256color
@@ -11,17 +11,26 @@ urxvt.urgentOnBell: true
 urxvt.perl-ext-common:  default,matcher
 urxvt.matcher.button: 1
 urxvt.urlLauncher: firefox
+urxvt.internalBorder:0
+!urxvt.borderColor:#000000
 
 ! terminal font
-urxvt.font: 7x13
-urxvt.boldFont: 7x13bold
-urxvt.italicFont: 7x13
-urxvt.boldItalicFont: 7x13bold
+!xft
+urxvt.font: xft:Liberation Mono:pixelsize=10
+urxvt.boldFont: xft:Liberation Mono:pixelsize=10:style=bold
+urxvt.italicFont: xft:Liberation Mono:pixelsize=10:style=italic
+urxvt.boldItalicFont: xft:Liberation Mono:pixelsize=10:style=bold italic
+
+!pixel
+!urxvt.font: 7x13
+!urxvt.boldFont: 7x13bold
+!urxvt.italicFont: 7x13
+!urxvt.boldItalicFont: 7x13bold
 
 Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+!Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.antialias: 1
-Xft.dpi: 96
 Xft.rgba: rgb
